@@ -1,0 +1,584 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nikhil Krishna V | Portfolio</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor-dot"></div>
+    <div class="cursor-outline"></div>
+
+    <!-- Animated Background Canvas -->
+    <canvas id="particleCanvas"></canvas>
+
+    <!-- Navigation -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>NK<span class="logo-bracket">/&gt;</span>
+            </a>
+            <div class="nav-menu" id="navMenu">
+                <a href="#hero" class="nav-link active">Home</a>
+                <a href="#about" class="nav-link">About</a>
+                <a href="#experience" class="nav-link">Experience</a>
+                <a href="#skills" class="nav-link">Skills</a>
+                <a href="#contact" class="nav-link">Contact</a>
+            </div>
+            <div class="hamburger" id="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <div class="hero-badge scroll-reveal">
+                <span class="badge-dot"></span>
+                <span>Available for Opportunities</span>
+            </div>
+            <h1 class="hero-title scroll-reveal">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-line name-gradient">Nikhil Krishna V</span>
+            </h1>
+            <p class="hero-subtitle scroll-reveal">
+                B.Com Computer Application Graduate | Accountant | Voice & Non-Voice Process Specialist
+            </p>
+            <p class="hero-description scroll-reveal">
+                A detail-oriented professional blending accounting expertise with exceptional customer service skills. 
+                Certified in Tally Prime with GST & Microsoft Excel, with 9 months of BPO experience and a passion for 
+                financial accuracy and operational excellence.
+            </p>
+            <div class="hero-cta scroll-reveal">
+                <a href="#contact" class="btn btn-primary">
+                    <span>Let's Connect</span>
+                    <i class="fas fa-arrow-right"></i>
+                </a>
+                <a href="#experience" class="btn btn-secondary">
+                    <span>View My Journey</span>
+                    <i class="fas fa-briefcase"></i>
+                </a>
+            </div>
+            <div class="hero-stats scroll-reveal">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="9">0</span>
+                    <span class="stat-label">Months Experience</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3">0</span>
+                    <span class="stat-label">Professional Certifications</span>
+                </div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="8">0</span>
+                    <span class="stat-label">CGPA Score</span>
+                </div>
+            </div>
+        </div>
+        <div class="hero-visual scroll-reveal">
+            <div class="orbit-container">
+                <div class="orbit orbit-1">
+                    <div class="orbit-icon"><i class="fas fa-calculator"></i></div>
+                </div>
+                <div class="orbit orbit-2">
+                    <div class="orbit-icon"><i class="fas fa-headset"></i></div>
+                </div>
+                <div class="orbit orbit-3">
+                    <div class="orbit-icon"><i class="fas fa-chart-line"></i></div>
+                </div>
+                <div class="center-glow">
+                    <div class="profile-initials">NK</div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- About & Education Section -->
+    <section class="about" id="about">
+        <div class="section-container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">About Me</span>
+                <h2 class="section-title">My <span class="text-gradient">Journey</span></h2>
+                <p class="section-subtitle">From the classroom to the corporate world</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-card glass-card scroll-reveal">
+                    <div class="card-glow"></div>
+                    <div class="about-icon">
+                        <i class="fas fa-user-graduate"></i>
+                    </div>
+                    <h3>Who I Am</h3>
+                    <p>
+                        I'm a dedicated <strong>B.Com (Computer Application)</strong> graduate from 
+                        <strong>Karpagam Academy of Higher Education</strong> with an impressive <strong>8.27 CGPA</strong>. 
+                        My academic journey has equipped me with a solid foundation in accounting principles, 
+                        computer applications, and business management.
+                    </p>
+                    <div class="about-tags">
+                        <span class="tag">Detail-Oriented</span>
+                        <span class="tag">Multilingual</span>
+                        <span class="tag">Analytical</span>
+                    </div>
+                </div>
+
+                <div class="about-card glass-card scroll-reveal">
+                    <div class="card-glow"></div>
+                    <div class="about-icon">
+                        <i class="fas fa-university"></i>
+                    </div>
+                    <h3>Education</h3>
+                    <div class="edu-timeline">
+                        <div class="edu-item">
+                            <div class="edu-marker"></div>
+                            <div class="edu-content">
+                                <h4>B.Com (Computer Application)</h4>
+                                <span class="edu-inst">Karpagam Academy of Higher Education</span>
+                                <span class="edu-year">2025 | 8.27 CGPA</span>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-marker"></div>
+                            <div class="edu-content">
+                                <h4>HSC (12th Grade)</h4>
+                                <span class="edu-inst">Annai Velankanni Matric Hr. Sec. School</span>
+                                <span class="edu-year">2022 | 67%</span>
+                            </div>
+                        </div>
+                        <div class="edu-item">
+                            <div class="edu-marker"></div>
+                            <div class="edu-content">
+                                <h4>SSLC (10th Grade)</h4>
+                                <span class="edu-inst">Annai Velankanni Matric Hr. Sec. School</span>
+                                <span class="edu-year">2020 | 76.6%</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="about-card glass-card scroll-reveal">
+                    <div class="card-glow"></div>
+                    <div class="about-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Certifications</h3>
+                    <div class="cert-list">
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Accounting in Tally Prime with GST</h4>
+                                <span>Agaram Accounting Solution | May–June 2024</span>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Microsoft Excel</h4>
+                                <span>Agaram Accounting Solution | May–June 2024</span>
+                            </div>
+                        </div>
+                        <div class="cert-item">
+                            <i class="fas fa-award"></i>
+                            <div>
+                                <h4>Visual Art & Graphic Design</h4>
+                                <span>Karpagam Academy of Higher Education</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Languages -->
+            <div class="languages-bar scroll-reveal">
+                <span class="lang-label">Languages I Speak:</span>
+                <div class="lang-pills">
+                    <span class="lang-pill active">English</span>
+                    <span class="lang-pill active">Tamil</span>
+                    <span class="lang-pill active">Malayalam</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section class="experience" id="experience">
+        <div class="section-container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Experience</span>
+                <h2 class="section-title">Professional <span class="text-gradient">Timeline</span></h2>
+                <p class="section-subtitle">Building expertise across multiple domains</p>
+            </div>
+
+            <div class="timeline">
+                <div class="timeline-line"></div>
+
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item scroll-reveal" data-side="left">
+                    <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">
+                            <span class="date-badge">2025 – 2026</span>
+                            <span class="duration">9 Months</span>
+                        </div>
+                        <h3 class="timeline-title">BPO Voice Support Executive</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> HRH Private Ltd, Coimbatore
+                        </h4>
+                        <ul class="timeline-desc">
+                            <li><i class="fas fa-check-circle"></i> Handled high-volume inbound & outbound customer support calls in <strong>English, Tamil, and Malayalam</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Resolved customer queries, complaints, and escalations with professionalism and empathy</li>
+                            <li><i class="fas fa-check-circle"></i> Maintained accurate logs of all customer interactions with <strong>zero discrepancy</strong> in records</li>
+                            <li><i class="fas fa-check-circle"></i> Consistently met daily call targets, AHT benchmarks, and quality standards</li>
+                            <li><i class="fas fa-check-circle"></i> Coordinated with back-office teams for unresolved queries and pending tickets</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Customer Service</span>
+                            <span class="tag">Multilingual</span>
+                            <span class="tag">CRM</span>
+                            <span class="tag">Data Accuracy</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item scroll-reveal" data-side="right">
+                    <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">
+                            <span class="date-badge">July 2024</span>
+                            <span class="duration">45 Days</span>
+                        </div>
+                        <h3 class="timeline-title">Accounting & Operations Intern</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-building"></i> Unicast Alloys Private Limited, Coimbatore
+                        </h4>
+                        <ul class="timeline-desc">
+                            <li><i class="fas fa-check-circle"></i> Documented day-to-day business transactions and financial workflows</li>
+                            <li><i class="fas fa-check-circle"></i> Observed accounts payable/receivable cycles and procurement processes</li>
+                            <li><i class="fas fa-check-circle"></i> Gained hands-on exposure to invoice management and purchase order documentation</li>
+                            <li><i class="fas fa-check-circle"></i> Supported back-office operations including data recording and inventory documentation</li>
+                            <li><i class="fas fa-check-circle"></i> Organized physical and digital records for operational departments</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Accounting</span>
+                            <span class="tag">Data Entry</span>
+                            <span class="tag">Invoicing</span>
+                            <span class="tag">Procurement</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item scroll-reveal" data-side="left">
+                    <div class="timeline-dot">
+                        <div class="dot-pulse"></div>
+                    </div>
+                    <div class="timeline-card glass-card">
+                        <div class="timeline-date">
+                            <span class="date-badge">Academic Project</span>
+                            <span class="duration">Research</span>
+                        </div>
+                        <h3 class="timeline-title">Consumer Behavior Research</h3>
+                        <h4 class="timeline-company">
+                            <i class="fas fa-flask"></i> Karpagam Academy of Higher Education
+                        </h4>
+                        <ul class="timeline-desc">
+                            <li><i class="fas fa-check-circle"></i> Conducted structured research on <strong>Television Advertising & Consumer Behavior</strong></li>
+                            <li><i class="fas fa-check-circle"></i> Designed and executed survey methodology for primary data collection</li>
+                            <li><i class="fas fa-check-circle"></i> Analyzed quantitative data to identify market trends and patterns</li>
+                            <li><i class="fas fa-check-circle"></i> Presented actionable business insights through formal research reports</li>
+                        </ul>
+                        <div class="timeline-tags">
+                            <span class="tag">Research</span>
+                            <span class="tag">Data Analysis</span>
+                            <span class="tag">Marketing</span>
+                            <span class="tag">Reporting</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills" id="skills">
+        <div class="section-container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">My Arsenal</span>
+                <h2 class="section-title">Skills <span class="text-gradient">Bento Grid</span></h2>
+                <p class="section-subtitle">A versatile toolkit for modern business operations</p>
+            </div>
+
+            <div class="bento-grid">
+                <!-- Large Card: Accounting -->
+                <div class="bento-card bento-large glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                    <h3>Accounting & Finance</h3>
+                    <p>Certified expertise in Tally Prime with GST, journal entries, ledger maintenance, and basic accounting principles.</p>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span>Tally Prime + GST</span>
+                            <div class="bar"><div class="fill" data-width="90"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Journal & Ledger</span>
+                            <div class="bar"><div class="fill" data-width="85"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>GST Returns</span>
+                            <div class="bar"><div class="fill" data-width="75"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Medium Card: MS Office -->
+                <div class="bento-card bento-medium glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-file-excel"></i>
+                    </div>
+                    <h3>Microsoft Office</h3>
+                    <p>Certified in Excel with VLOOKUP, Pivot Tables, and advanced formatting. Proficient in Word and documentation.</p>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span>MS Excel</span>
+                            <div class="bar"><div class="fill" data-width="92"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>MS Word</span>
+                            <div class="bar"><div class="fill" data-width="88"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Card: Communication -->
+                <div class="bento-card bento-small glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-comments"></i>
+                    </div>
+                    <h3>Communication</h3>
+                    <p>Multilingual professional fluent in English, Tamil, and Malayalam with active listening and conflict resolution skills.</p>
+                    <div class="comm-badges">
+                        <span class="comm-badge">English</span>
+                        <span class="comm-badge">Tamil</span>
+                        <span class="comm-badge">Malayalam</span>
+                    </div>
+                </div>
+
+                <!-- Small Card: Data Entry -->
+                <div class="bento-card bento-small glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-keyboard"></i>
+                    </div>
+                    <h3>Data Entry</h3>
+                    <p>High-accuracy data processing, CRM management, and meticulous record-keeping with zero-error tolerance.</p>
+                </div>
+
+                <!-- Medium Card: Web & Design -->
+                <div class="bento-card bento-medium glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-code"></i>
+                    </div>
+                    <h3>Web & Design</h3>
+                    <p>Basic web development with HTML/CSS and UI/UX wireframing in Figma. Visual Art & Graphic Design certified.</p>
+                    <div class="skill-bars">
+                        <div class="skill-bar">
+                            <span>HTML/CSS</span>
+                            <div class="bar"><div class="fill" data-width="70"></div></div>
+                        </div>
+                        <div class="skill-bar">
+                            <span>Figma</span>
+                            <div class="bar"><div class="fill" data-width="65"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Large Card: Customer Service -->
+                <div class="bento-card bento-large glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-headset"></i>
+                    </div>
+                    <h3>Customer Service Excellence</h3>
+                    <p>9 months of hands-on BPO experience handling inbound/outbound calls, resolving escalations, and maintaining quality standards.</p>
+                    <div class="service-metrics">
+                        <div class="metric">
+                            <span class="metric-num">3</span>
+                            <span class="metric-label">Languages</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">0</span>
+                            <span class="metric-label">Discrepancy</span>
+                        </div>
+                        <div class="metric">
+                            <span class="metric-num">100%</span>
+                            <span class="metric-label">Quality</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Small Card: Stock Analysis -->
+                <div class="bento-card bento-small glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-chart-line"></i>
+                    </div>
+                    <h3>Stock Analysis</h3>
+                    <p>Passionate about financial markets, stock market analysis, and reading financial books.</p>
+                </div>
+
+                <!-- Small Card: Soft Skills -->
+                <div class="bento-card bento-small glass-card scroll-reveal">
+                    <div class="bento-glow"></div>
+                    <div class="bento-icon">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3>Soft Skills</h3>
+                    <p>Hardworking, detail-oriented, analytical thinker, team player with strong work ethic and adaptability.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="section-container">
+            <div class="section-header scroll-reveal">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="text-gradient">Connect</span></h2>
+                <p class="section-subtitle">Ready to bring value to your organization</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info scroll-reveal">
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Location</h4>
+                            <p>10/1 Megarali Street, Vellalore<br>Coimbatore – 641111, Tamil Nadu</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Phone</h4>
+                            <p>+91 99940 67524</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>Email</h4>
+                            <p>nikhilkrishna1621@gmail.com</p>
+                        </div>
+                    </div>
+                    <div class="info-card glass-card">
+                        <div class="info-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </div>
+                        <div class="info-content">
+                            <h4>LinkedIn</h4>
+                            <p>linkedin.com/in/nikhil-krishna-v-73a69b263</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <a href="https://linkedin.com/in/nikhil-krishna-v-73a69b263" target="_blank" class="social-btn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="mailto:nikhilkrishna1621@gmail.com" class="social-btn">
+                            <i class="fas fa-envelope"></i>
+                        </a>
+                        <a href="tel:+919994067524" class="social-btn">
+                            <i class="fas fa-phone-alt"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper scroll-reveal">
+                    <form class="contact-form glass-card" id="contactForm">
+                        <div class="form-glow"></div>
+                        <h3>Send a Message</h3>
+                        <div class="form-group">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" required>
+                            <label for="email">Your Email</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" required>
+                            <label for="subject">Subject</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" rows="4" required></textarea>
+                            <label for="message">Your Message</label>
+                            <div class="form-line"></div>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-brand">
+                <span class="logo-bracket">&lt;</span>NK<span class="logo-bracket">/&gt;</span>
+            </div>
+            <p class="footer-text">Designed & Built with passion by Nikhil Krishna V</p>
+            <p class="footer-copy">&copy; 2026 All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <a href="#" class="back-to-top" id="backToTop">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+
+    <!-- External JS -->
+    <script src="script.js"></script>
+</body>
+</html>
