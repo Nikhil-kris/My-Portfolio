@@ -530,47 +530,40 @@
 
                 <div class="contact-form-wrapper scroll-reveal">
                 <form class="contact-form glass-card" id="contactForm" action="https://api.web3forms.com/submit" method="POST">
-    
-    <div class="form-glow"></div>
-
-    <!-- Web3Forms Hidden Fields -->
-    <input type="hidden" name="access_key" value="ef9241f7-2825-4a9c-a231-a6c4b328f2a6" />
-    <input type="hidden" name="email_subject" value="New Portfolio Contact" />
-    <input type="hidden" name="redirect" value="false" />
-
-    <h3>Send a Message</h3>
-
-    <div class="form-group">
-        <input type="text" id="name" name="name" required>
-        <label for="name">Your Name</label>
-        <div class="form-line"></div>
-    </div>
-
-    <div class="form-group">
-        <input type="email" id="email" name="email" required>
-        <label for="email">Your Email</label>
-        <div class="form-line"></div>
-    </div>
-
-    <div class="form-group">
-        <input type="text" id="subject" name="subject" required>
-        <label for="subject">Subject</label>
-        <div class="form-line"></div>
-    </div>
-
-    <div class="form-group">
-        <textarea id="message" name="message" rows="4" required></textarea>
-        <label for="message">Your Message</label>
-        <div class="form-line"></div>
-    </div>
-
-    <button type="submit" class="btn btn-primary btn-full">
-        <span>Send Message</span>
-        <i class="fas fa-paper-plane"></i>
-    </button>
-
-    <!-- Success/Error Message -->
-    <p id="formResult" style="margin-top:14px; text-align:center; font-size:14px; font-weight:500;"></p>
+                    <div class="form-glow"></div>
+                    <!-- Web3Forms Hidden Fields -->
+                    <input type="hidden" name="access_key" value="ef9241f7-2825-4a9c-a231-a6c4b328f2a6" />
+                    <input type="hidden" name="email_subject" value="New Portfolio Contact" />
+                    <input type="hidden" name="redirect" value="false" />
+                    <h3>Send a Message</h3>
+                    <div class="form-group">
+                        <input type="text" id="name" name="name" required>
+                        <label for="name">Your Name</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" id="email" name="email" required>
+                        <label for="email">Your Email</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <input type="text" id="subject" name="subject" required>
+                        <label for="subject">Subject</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <div class="form-group">
+                        <textarea id="message" name="message" rows="4" required></textarea>
+                        <label for="message">Your Message</label>
+                        <div class="form-line"></div>
+                    </div>
+                    <!-- ADD CAPTCHA HERE -->
+                    <div class="h-captcha" data-captcha="true"></div>
+                    <button type="submit" class="btn btn-primary btn-full">
+                        <span>Send Message</span>
+                        <i class="fas fa-paper-plane"></i>
+                    </button>
+                    <!-- Success/Error Message -->
+                    <p id="formResult" style="margin-top:14px; text-align:center; font-size:14px; font-weight:500;"></p>
 
 </form>
                 </div>
@@ -596,5 +589,7 @@
 
     <!-- External JS -->
     <script src="script.js"></script>
+    <!-- Web3Forms Captcha Script -->
+    <script src="https://web3forms.com/client/script.js" async defer></script>
 </body>
 </html>
