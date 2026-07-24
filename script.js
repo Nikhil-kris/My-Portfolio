@@ -329,40 +329,83 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ============================================
-    // CONTACT FORM HANDLING
-    // ============================================
-    const contactForm = document.getElementById('contactForm');
+// ============================================
+// CONTACT FORM HANDLING — WEB3FORMS
+// ============================================
+const contactForm = document.getElementById('contactForm');
 
-    contactForm.addEventListener('submit', (e) => {
-        e.preventDefault();
+contactForm.addEventListener('submit', async (e) => {
+    e.preventDefault();
 
-        const name = document.getElementById('name').value;
-        const email = document.getElementById('email').value;
-        const subject = document.getElementById('subject').value;
-        const message = document.getElementById('message').value;
+    const btn = contactForm.querySelector('button[type="submit"]');
+    const btnSpan = btn.querySelector('span');
+    const originalContent = btn.innerHTML;
 
-        // Create a temporary success message
-        const btn = contactForm.querySelector('button[type="submit"]');
-        const originalContent = btn.innerHTML;
+    // Loading state
+    btn.innerHTML = '<span>Sending...</span> <i class="fas fa-spinner fa-spin"></i>';
+    btn.disabled = true;
 
-        btn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
-        btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
-        btn.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.4)';
+    const formData = new FormData(contactForm);
 
-        // Reset form
-        contactForm.reset();
+    try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+            method: 'POST',
+            body: formData
+        });
 
-        // Reset button after 3 seconds
-        setTimeout(() => {
-            btn.innerHTML = originalContent;
-            btn.style.background = '';
-            btn.style.boxShadow = '';
-        }, 3000);
+        const data = await response.json();
 
-        // Log to console (in production, send to backend)
-        console.log('Form submitted:', { name, email, subject, message });
-    });
+        if (data.success) {
+            // Success!
+            btn.innerHTML = '<span>Message Sent!</span> <i class="fas fa-check"></i>';
+            btn.style.background = 'linear-gradient(135deg, #10b981, #059669)';
+            btn.style.boxShadow = '0 4px 20px rgba(16, 185, 129, 0.4)';
+
+            // Show success message
+            const formResult = document.getElementById('formResult');
+            if (formResult) {
+                formResult.textContent = '✅ Message sent! Nikhil will reply soon.';
+                formResult.style.color = '#10b981';
+            }
+
+            // Reset form
+            contactForm.reset();
+
+        } else {
+            // Error
+            btn.innerHTML = '<span>Failed! Try Again</span> <i class="fas fa-times"></i>';
+            btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+
+            const formResult = document.getElementById('formResult');
+            if (formResult) {
+                formResult.textContent = '❌ Something went wrong. Please try again.';
+                formResult.style.color = '#ef4444';
+            }
+        }
+
+    } catch (error) {
+        // Network error
+        btn.innerHTML = '<span>Network Error!</span> <i class="fas fa-times"></i>';
+        btn.style.background = 'linear-gradient(135deg, #ef4444, #dc2626)';
+
+        const formResult = document.getElementById('formResult');
+        if (formResult) {
+            formResult.textContent = '❌ Network error. Check connection and try again.';
+            formResult.style.color = '#ef4444';
+        }
+    }
+
+    // Reset button after 4 seconds
+    setTimeout(() => {
+        btn.innerHTML = originalContent;
+        btn.style.background = '';
+        btn.style.boxShadow = '';
+        btn.disabled = false;
+
+        const formResult = document.getElementById('formResult');
+        if (formResult) formResult.textContent = '';
+    }, 4000);
+});
 
     // ============================================
     // PARALLAX EFFECT ON HERO
